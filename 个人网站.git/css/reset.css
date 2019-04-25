@@ -1,0 +1,72 @@
+﻿/* reset 样式重置 */
+/* 内外边距通常各个浏览器样式表现位置不同,重置内外边距*/
+body,h1,h2,h3,h4,h5,p,dl,dd,ul,ol,form,input,textarea,th,td,select { margin:0; padding:0; }
+em { font-style:normal; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:none; vertical-align:top; }  /* 去除IE下默认边框,顶部对齐 */
+table{                                    /* 去掉各Table cell 的边距并让其边重合 */
+border-collapse:collapse;border-spacing:0;
+}
+
+input,textarea { border:none; }
+textarea { resize:none; overflow:auto; }
+
+/*默认字体:要注意表单元素并不继承父级 font 的问题 */
+body,input, label, select, option, textarea, button, fieldset, legend{
+ /* 字体大小/行高(12px),字体样式(前三个国外用的多),宋体(后两个编码过的宋体，国内用的多) */
+ font:12px/1.5 Arial, Helvetica, sans-serif,\5b8b\4f53; 
+ font: 12px/150% Tahoma,Helvetica,Arial,Verdana,"Microsoft YaHei","SimSun","宋体";
+}
+input, label, select, option, textarea, button, fieldset, legend{
+font-size:100%;
+}
+/* end reset */
+/* ----------------------------------------------------------------------- */
+
+/* public 公共部分*/
+.clear { zoom:1; }   /* 兼容IE浏览器清除浮动 */
+.clear:after { content:''; display:block; clear:both; }
+.fl { float:left; } /* 左浮动，与右浮动 */
+.fr { float:right; }
+.gradient {         /*  线性渐变兼容写法 */
+	background:-moz-linear-gradient(top, #FFFFFF, #f8f8f8);
+	background:-webkit-linear-gradient(top, #FFFFFF, #f8f8f8);
+	background:-ms-linear-gradient(top, #FFFFFF, #f8f8f8);
+	background:linear-gradient(top, #FFFFFF, #f8f8f8);
+	/* IE 8-9渐变写法 IE依靠滤镜实现渐变。startColorstr表示起点的颜色，endColorstr表示终点颜色。GradientType表示渐变类型，0为缺省值，表示垂直渐变，1表示水平渐变。 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#f8f8f8)";
+	+background:#f9f9f9; /* IE6,7只让它看单颜色 */
+}
+/* 在 IE 8-9 滤镜中使用 0-100 表示透明度，因此 opacity=40 相当于 Opacity 属性为 0.4，亦即透明度为 40% */
+.msopacity{  
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40); /* IE8-9 */    
+}
+/*背景用rgba的兼容写法 IE6/7/8  具体用法文章链接:http://www.tuicool.com/articles/juiEFrb*/
+.rgba{
+   background: rgba(255,255,255,.1); /* 透明度为0.1的白色 . rgba的含义，r代表red，g代表green，b代表blue，红绿蓝是三原色。所有颜色都可以由这三种颜色拼合而成。a代表透明度  */
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endColorstr=#19ffffff);  /* IE8 下兼容写法 */
+}
+/* CSS实现正,反三角形 */
+.triangle_up, .triangle_down_red, .triangle_down_gray { position:absolute; width:0; height:0; overflow:hidden; border-left:4px solid transparent; border-right:4px solid transparent; }
+.triangle_up { border-bottom:4px solid #ca0309; }   /* 正红小三角形 */
+.triangle_down_red { border-top:4px solid #ca0309; } /* 倒红小三角形 */
+.triangle_down_gray { border-top:9px solid white; margin-left: 46px;} /* 倒白小三角形 */
+/* end public */
+/* ------------------------------------------------------------------- */
+
+/*layout 整体布局*/
+/* #header_box,#search, #nav, .content ,#footer,#foot_box{ width:1211px; margin:0 auto}
+#header {
+    width:100%;
+    height:30px;
+    background:#F7F7F7;
+	line-height:30px;
+    border-bottom:1px solid #eee;
+}
+#header_box{height:30px;}
+#search {height:60px;padding:15px 0;}
+#nav {height:41px;}
+#foot_box {height:173px;margin-bottom:18px;}
+#footer {height:180px;margin-bottom:18px;} */
+/* ------------------------------------------------------------------- */

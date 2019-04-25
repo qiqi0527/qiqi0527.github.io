@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人网站</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/quanpinggundong.js"></script>
+</head>
+
+<body>
+    <div class="table center bg-purple">
+        <div class="table-cell py4">
+            <img src="img/loading-spinning-bubbles.svg" width="64" height="64"/>
+            <h1 class="h1 mt2 mb0">still loading...</h1>
+        </div>
+    </div>
+    <div class="wrap" id="wrap" style="top:0%">
+        <!-- 第一屏 -->
+        <div class="page_one">
+            <p class="p">JiaZiQi personal website</p>
+            <div class="top_daohang">
+                <ul>
+                    <li onclick="javascript:onTopClick1();">个人简介</li>
+                    <li onclick="javascript:onTopClick2();">成长经历</li>
+                    <li onclick="javascript:onTopClick3();">个人梦想</li>
+                    <li onclick="javascript:onTopClick4();">coming soon...</li>
+                </ul>
+            </div>
+            <div class="mE">
+                <!-- 碎片轮播 -->
+            </div>
+        </div>
+        <!-- 第二屏 -->
+        <div class="page_two" id="page_two">
+            <div class="box_2">
+                <ul>
+                    <li>
+                        姓名：贾子淇
+                    </li>
+                    <li>
+                        生日：2000.05.27
+                    </li>
+                    <li>
+                        年龄：19
+                    </li>
+                    <li>
+                        性别：女
+                    </li>
+                    <li>
+                        最骄傲的事儿：有幸来到这个世界，并且认识我生命中的每一个人~
+                    </li>
+                    <li>
+                        梦想：①成为优秀的演说家&nbsp;&nbsp;&nbsp;②成为一名背包客&nbsp;&nbsp;&nbsp;③开一家心里教育机构
+                    </li>
+                    <li>
+                        个人格言：水滴石穿不是水的力量，而是重复和坚持的力量。
+                    </li>
+                    <li>
+                        幸福感爆棚的事情就是~~我是恩师的弟子(＾－＾)V
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 第三屏 -->
+        <div class="page_three" id="page_three">
+            <div class="box_3">
+                <div id="mask"></div>
+            </div>
+        </div>
+        <!-- 第四屏 -->
+        <div class="page_four" id="page_four">
+            <div class="box_4">
+                <div class="imgList">
+                    <ul>
+                        <li class="cur"><a href="javascript:;"><img src="img/001.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="img/002.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="img/003.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="img/004.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="img/005.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="btns">
+                    <a href="javascript:;" class="leftBtn">
+                        <</a> <a href="javascript:;" class="rightBtn">>
+                    </a>
+                </div>
+                <div class="btnList">
+                    <ol>
+                        <li class="cur"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="maoni">
+                    <!-- 存放爆炸图的div块区域 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script>
+    document.onreadystatechange = subSomething;//当页面加载状态改变的时候执行这个方法.
+    function subSomething(){ 
+        if(document.readyState == "complete"){ //当页面加载状态为完全结束时进入 
+            $('.bg-purple').hide();
+        }
+    }
+    </script>
+</body>
+</html>
